@@ -16,6 +16,7 @@ git submodule update --init --recursive
 
 echo "[*] Copying packages to the build environment..."
 cp -a ./packages/* ./termux-packages/packages/
+cp -a ./unstable-packages/packages/* ./termux-packages/packages/
 
 echo "[*] Running container '$CONTAINER_NAME' from image '$IMAGE_NAME'..."
 docker start "$CONTAINER_NAME" > /dev/null 2> /dev/null || {
